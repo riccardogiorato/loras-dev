@@ -75,7 +75,7 @@ export async function POST(req: Request) {
 
   let response;
   try {
-    response = await client.images.create({
+    response = await client.images.generate({
       prompt: refinedPrompt,
       model: "black-forest-labs/FLUX.1-dev-lora",
       height: selectedLora.height ?? 768,
